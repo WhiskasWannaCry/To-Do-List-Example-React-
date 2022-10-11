@@ -36,12 +36,10 @@ function App() {
   }
 
   function clickHandlerForDeleteButton(id) {
-    if(confirm('Вы действительно хотите удалить задачу?')) {
-      let copy = todoArr.slice()
+    let copy = todoArr.slice()
     let idx = copy.findIndex(elem => elem.id === id)
     copy[idx].status = "deleted"
     setTodoArr(copy)
-    }
   }
 
   function clickHandlerForDoneButton(id) {
