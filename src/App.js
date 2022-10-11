@@ -66,7 +66,7 @@ function App() {
         todoArr.filter(elem => elem.status === selectValue).map(oneTodo => {
           if (oneTodo.status === "active") {
             return (
-              <div key={oneTodo.id} className="todo_container_active">
+              <div className="todo_container_active">
                 <div className="todo_text">{oneTodo.text}</div>
                 <div className="delete_and_done_buttons_container">
                   <button className="done_todo" onClick={() => clickHandlerForDoneButton(oneTodo.id)}></button>
@@ -76,13 +76,13 @@ function App() {
           }
           else if (oneTodo.status === "deleted") {
             return (
-              <div key={oneTodo.id} className="todo_container_deleted">
+              <div className="todo_container_deleted">
                 <div className="todo_text">{oneTodo.text}</div>
               </div>)
           }
           else if (oneTodo.status === "isDone") {
             return (
-              <div key={oneTodo.id} className="todo_container_doned">
+              <div className="todo_container_doned">
                 <div className="todo_text">{oneTodo.text}</div>
               </div>)
           }
